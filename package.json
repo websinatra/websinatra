@@ -63,6 +63,7 @@
   "private": true,
   "repository": "github:websinatra/websinatra",
   "type": "module",
+  "version": "0.1.0",
   "workspaces": [
     "./packages/*"
   ]
