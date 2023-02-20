@@ -1,0 +1,46 @@
+{
+  "author": "Aziz Da <azizdawhat@gmail.com>",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.20.7",
+    "@websinatra/sinatra": "^0.1.0"
+  },
+  "description": "Cyan is an async iterable object for performing async array operations on values sourced from the object with concurrency control",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./construct": {
+      "types": "./dist/Cyan.construct.d.mts",
+      "default": "./dist/Cyan.construct.mjs"
+    }
+  },
+  "keywords": [
+    "async array operations",
+    "async iterable object",
+    "concurrency control",
+    "websinatra"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "./dist/index.cjs",
+  "name": "@websinatra/cyan",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "./packages/sinatra-cyan",
+    "type": "git",
+    "url": "https://github.com/websinatra/websinatra.git"
+  },
+  "scripts": {
+    "build": "concurrently --raw \"npm:build-*\"",
+    "build-rollup": "NODE_OPTIONS=\"--experimental-import-meta-resolve\" rollup --config \"./rollup.config.mjs\"",
+    "build-tsc": "tsc --project \"./tsconfig.json\"",
+    "prebuild": "npm run remove",
+    "remove": "del-cli \"./dist/*\"",
+    "test": "mocha --config \"./.mocharc.cjs\""
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

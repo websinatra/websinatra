@@ -6,6 +6,10 @@
 
 ## Usage
 
+### [Cyan](packages/sinatra-cyan)
+
+⏰ Cyan is an async iterable object for performing async array operations on values sourced from the object with concurrency control.
+
 ### [Sinatra](packages/sinatra-sinatra)
 
 🔑 Sinatra static properties are symbols used as unique property keys by WebSinatra modules.

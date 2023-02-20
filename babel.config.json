@@ -1,5 +1,24 @@
 {
-  "overrides": [],
+  "overrides": [
+    {
+      "plugins": [
+        [
+          "@babel/plugin-proposal-decorators",
+          {
+            "version": "2022-03"
+          }
+        ],
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            "corejs": 3,
+            "version": "^7.20.7"
+          }
+        ]
+      ],
+      "test": "./packages/sinatra-cyan"
+    }
+  ],
   "plugins": [
     [
       "@babel/plugin-transform-runtime",
