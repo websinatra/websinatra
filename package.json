@@ -1,0 +1,22 @@
+{
+  "author": "Aziz Da <azizdawhat@gmail.com>",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "description": "Useful JS modules",
+  "devDependencies": {
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "standard-version": "^9.5.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "name": "websinatra",
+  "private": true,
+  "repository": "github:websinatra/websinatra",
+  "type": "module",
+  "workspaces": [
+    "./packages/*"
+  ]
+}
