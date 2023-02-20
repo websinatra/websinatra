@@ -4,6 +4,12 @@
 
 💎 Useful JS modules.
 
+## Usage
+
+### [Sinatra](packages/sinatra-sinatra)
+
+🔑 Sinatra static properties are symbols used as unique property keys by WebSinatra modules.
+
 ## Authors
 
 Aziz Da <azizdawhat@gmail.com>

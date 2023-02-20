@@ -1,0 +1,38 @@
+{
+  "author": "Aziz Da <azizdawhat@gmail.com>",
+  "dependencies": {
+    "@babel/runtime": "^7.20.7"
+  },
+  "description": "Sinatra static properties are symbols used as unique property keys by WebSinatra modules",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "keywords": [
+    "symbol",
+    "unique property keys",
+    "websinatra"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "./dist/index.cjs",
+  "name": "@websinatra/sinatra",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "./packages/sinatra-sinatra",
+    "type": "git",
+    "url": "https://github.com/websinatra/websinatra.git"
+  },
+  "scripts": {
+    "build": "concurrently --raw \"npm:build-*\"",
+    "build-rollup": "NODE_OPTIONS=\"--experimental-import-meta-resolve\" rollup --config \"./rollup.config.mjs\"",
+    "build-tsc": "tsc --project \"./tsconfig.json\"",
+    "prebuild": "npm run remove",
+    "remove": "del-cli \"./dist/*\"",
+    "test": "mocha --config \"./.mocharc.cjs\""
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

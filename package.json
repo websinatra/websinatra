@@ -3,13 +3,59 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "rollup": {
+      "dir": "./dist",
+      "format": "module",
+      "input": "./src/index.mjs",
+      "module": ".mjs",
+      "plugins": [
+        [
+          "@rollup/plugin-node-resolve"
+        ],
+        [
+          "@rollup/plugin-eslint"
+        ],
+        [
+          "@rollup/plugin-babel",
+          {
+            "babelHelpers": "runtime",
+            "rootMode": "upward"
+          }
+        ],
+        [
+          "@rollup/plugin-terser",
+          {
+            "keep_classnames": true,
+            "keep_fnames": true
+          }
+        ]
+      ]
     }
   },
   "description": "Useful JS modules",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-eslint": "^9.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@types/node": "^18.14.0",
     "commitizen": "^4.2.5",
+    "concurrently": "^7.6.0",
     "cz-conventional-changelog": "^3.3.0",
-    "standard-version": "^9.5.0"
+    "del-cli": "^5.0.0",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "mocha": "^10.2.0",
+    "rollup": "^3.17.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
   },
   "license": "GPL-3.0-or-later",
   "name": "websinatra",

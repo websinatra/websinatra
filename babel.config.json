@@ -1,0 +1,16 @@
+{
+  "overrides": [],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "version": "^7.20.7"
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env"
+    ]
+  ]
+}
