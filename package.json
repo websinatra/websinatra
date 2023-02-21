@@ -7,7 +7,7 @@
     "rollup": {
       "dir": "./dist",
       "format": "module",
-      "input": "./src/index.mjs",
+      "input": "./src/index.js",
       "module": ".mjs",
       "plugins": [
         [

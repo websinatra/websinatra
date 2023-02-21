@@ -52,7 +52,7 @@ const config = {
   external: [
     /@babel\/runtime/,
   ],
-  input: './src/index.mjs',
+  input: './src/index.js',
   output: [
     outputFn(output, {
       banner,
