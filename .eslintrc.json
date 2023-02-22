@@ -8,7 +8,7 @@
   "overrides": [
     {
       "files": [
-        "./packages/sinatra-cyan/**/!(*.config).mjs"
+        "./packages/sinatra-cyan/**/*.js"
       ],
       "rules": {
         "no-restricted-syntax": [
@@ -33,7 +33,7 @@
       "error",
       "ignorePackages",
       {
-        "mjs": "always"
+        "js": "always"
       }
     ]
   }

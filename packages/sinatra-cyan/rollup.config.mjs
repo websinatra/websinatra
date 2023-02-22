@@ -41,7 +41,7 @@ const banner = `/*!
  */
 `;
 
-const input = './src/Cyan.construct.mjs';
+const input = './src/Cyan.construct.js';
 
 const plugins = await pluginsFn(pluginEntries, Object.entries({
   '@rollup/plugin-babel': Object.assign({}, babelOptions, {
@@ -56,7 +56,7 @@ const config = [
       /@babel\/runtime-corejs3/,
       /@websinatra\//,
     ],
-    input: './src/index.mjs',
+    input: './src/index.js',
     output: [
       outputFn(output, {
         banner,
@@ -73,11 +73,20 @@ const config = [
   {
     input,
     plugins,
-    output: outputFn(output, {
-      banner,
-      input,
-      module,
-    }),
+    output: [
+      outputFn(output, {
+        banner,
+        input,
+        commonjs: '.cjs',
+        exports: 'named',
+        format: 'commonjs',
+      }),
+      outputFn(output, {
+        banner,
+        input,
+        module,
+      }),
+    ],
   },
 ];
 

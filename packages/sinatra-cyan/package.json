@@ -2,18 +2,19 @@
   "author": "Aziz Da <azizdawhat@gmail.com>",
   "dependencies": {
     "@babel/runtime-corejs3": "^7.20.7",
-    "@websinatra/sinatra": "^0.1.0"
+    "@websinatra/sinatra": "^0.1.1"
   },
   "description": "Cyan is an async iterable object for performing async array operations on values sourced from the object with concurrency control",
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./construct": {
-      "types": "./dist/Cyan.construct.d.mts",
-      "default": "./dist/Cyan.construct.mjs"
+      "types": "./dist/Cyan.construct.d.ts",
+      "import": "./dist/Cyan.construct.mjs",
+      "require": "./dist/Cyan.construct.cjs"
     }
   },
   "keywords": [
@@ -42,5 +43,6 @@
     "test": "mocha --config \"./.mocharc.cjs\""
   },
   "type": "module",
-  "version": "0.1.0"
+  "types": "./dist/index.d.ts",
+  "version": "0.1.1"
 }

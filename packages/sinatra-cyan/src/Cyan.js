@@ -1,8 +1,8 @@
 import Sinatra from '@websinatra/sinatra';
 
-import construct, { bind } from './Cyan.construct.mjs';
+import construct, { bind } from './Cyan.construct.js';
 
-import { isBigInt, isFunction, isSymbol } from './utils.mjs';
+import { isBigInt, isFunction, isSymbol } from './utils.js';
 
 /**
  */
